@@ -1,20 +1,25 @@
-public class CaminhaoCarga extends Veiculo {
+import java.time.Year;
 
-	public CaminhaoCarga(String placa, String modelo, int anoFabricacao, double valorBaseLocado) {
-		super(placa, modelo, anoFabricacao, valorBaseLocado);
-		
+public class CaminhaoCarga extends Veiculos {
+
+	public CaminhaoCarga(String placa, String modelo, int anoFabricacao, double valorBaseLocacao) {
+		super(placa, modelo, anoFabricacao, valorBaseLocacao);
+
 	}
 
 	@Override
 	boolean exigeInspecaoAnual() {
-		
-		return false;
+		int anoAtual = Year.now().getValue();
+		return (anoAtual - getAnoFabricacao()) > 2;
 	}
 
 	@Override
 	double calcularSeguro() {
-		
-		return 0;
+		double valorSeguro = (getValorBaseLocacao() * 0.05) + 500;
+		return valorSeguro;
 	}
-
+	void tipoVeiculo() {
+		System.out.println("Tipo:Caminhao de Carga");
+	}
+	
 }
