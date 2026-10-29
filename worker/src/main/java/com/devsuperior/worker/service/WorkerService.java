@@ -5,6 +5,7 @@ import com.devsuperior.worker.repositorys.WorkerRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class WorkerService {
@@ -17,5 +18,10 @@ public class WorkerService {
 
     public List<Worker> findAll() {
         return repository.findAll();
+    }
+
+    public Worker findById(Long id){
+        Optional<Worker> obj = repository.findById(id);
+        return obj.orElseThrow(() -> new RuntimeException("Worker not find"));
     }
 }

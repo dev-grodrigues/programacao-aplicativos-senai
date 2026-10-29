@@ -38,13 +38,35 @@ public class SeedingConfig implements CommandLineRunner {
         Worker worker = new Worker("Gabriel", WorkerLevel.JUNIOR,1200.0, dept);
         worker = workerRepository.save(worker);
 
-        HourContract contract1 = new HourContract(LocalDate.of(2018,8,20), 50.0,20);
-        HourContract contract2 = new HourContract(LocalDate.of(2018,6,13), 30.0,18);
-        HourContract contract3 = new HourContract(LocalDate.of(2018,8,15), 80.0,10);
+        Worker worker2 = new Worker("Augusto da bumbum",WorkerLevel.MID_LEVEL,3000.0,dept);
+        worker2 = workerRepository.save(worker2);
+
+        Worker worker3 = new Worker("Maikinho",WorkerLevel.MID_LEVEL,3000.0,dept);
+        worker3 = workerRepository.save(worker3);
+
+        HourContract contract1 = new HourContract(LocalDate.of(2016,8,20), 50.0,20);
+        HourContract contract2 = new HourContract(LocalDate.of(2016,6,13), 30.0,18);
+        HourContract contract3 = new HourContract(LocalDate.of(2016,8,15), 80.0,10);
+
+        HourContract contract4 = new HourContract(LocalDate.of(2026,9,15), 50.0,10);
+        HourContract contract5 = new HourContract(LocalDate.of(2026,8,15), 30.0,10);
+        HourContract contract6 = new HourContract(LocalDate.of(2026,7,15), 80.0,10);
+
+        HourContract contract7 = new HourContract(LocalDate.of(2026,9,15), 50.0,10);
+        HourContract contract8 = new HourContract(LocalDate.of(2026,8,15), 30.0,10);
+        HourContract contract9 = new HourContract(LocalDate.of(2026,7,15), 80.0,10);
 
         worker.addContract(contract1);
         worker.addContract(contract2);
         worker.addContract(contract3);
+
+        worker2.addContract(contract4);
+        worker2.addContract(contract5);
+        worker2.addContract(contract6);
+
+        worker3.addContract(contract7);
+        worker3.addContract(contract8);
+        worker3.addContract(contract9);
 
     }
 }

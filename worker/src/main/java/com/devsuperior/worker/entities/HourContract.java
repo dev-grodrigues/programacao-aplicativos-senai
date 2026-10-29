@@ -1,5 +1,6 @@
 package com.devsuperior.worker.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 
@@ -17,6 +18,7 @@ public class HourContract {
     private Double valuePerHour;
     private Integer hours;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "worker_id")
     private Worker worker;
