@@ -38,7 +38,7 @@ public class SeedingConfig implements CommandLineRunner {
         Worker worker = new Worker("Gabriel", WorkerLevel.JUNIOR,1200.0, dept);
         worker = workerRepository.save(worker);
 
-        Worker worker2 = new Worker("Augusto da bumbum",WorkerLevel.MID_LEVEL,3000.0,dept);
+        Worker worker2 = new Worker("Augusto",WorkerLevel.MID_LEVEL,3000.0,dept);
         worker2 = workerRepository.save(worker2);
 
         Worker worker3 = new Worker("Maikinho",WorkerLevel.MID_LEVEL,3000.0,dept);
