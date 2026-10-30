@@ -43,6 +43,11 @@ public class SeedingConfig implements CommandLineRunner {
 
         Worker worker3 = new Worker("Maikinho",WorkerLevel.MID_LEVEL,3000.0,dept);
         worker3 = workerRepository.save(worker3);
+        Worker worker4 = new Worker("Samuel",WorkerLevel.MID_LEVEL,3000.0,dept);
+        worker4 = workerRepository.save(worker4);
+        Worker worker5 = new Worker("Westn",WorkerLevel.SENIOR,3000.0,dept);
+        worker5 = workerRepository.save(worker5);
+
 
         HourContract contract1 = new HourContract(LocalDate.of(2016,8,20), 50.0,20);
         HourContract contract2 = new HourContract(LocalDate.of(2016,6,13), 30.0,18);

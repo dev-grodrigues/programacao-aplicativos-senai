@@ -30,7 +30,7 @@ function buscarWorker() {
                     <p class="department">Departamento: ${worker.department.name}</p>
                     <h4>Contratos:</h4>
                     <ul>
-                        ${worker.contracts.map(c => `<li>Data: ${c.date} - Valor/Hora: ${c.valuePerHour}</li>`).join('')}
+                        ${worker.contracts.map(c => `<li>Data: ${c.date} - Valor/Hora: ${c.valuePerHour} </li>`).join('')}
                     </ul>
                 </div>
             `;
